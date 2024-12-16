@@ -5,27 +5,27 @@ chapters:
   # Sing O Muse!
   - file: act1/part1
     sections:
-      - title: Shadow
+      - title: Donor Risk
         file: act1/chapter1
-      - title: Übermensch
+      - title: Nondonor Risk
         file: act1/chapter2
-      - title: Individuation
+      - title: Attributable Risk
         file: act1/chapter3
         
   # Sing O Muse!
   - file: act2/part2
     sections:
-      - title: Biology
+      - title: Mortality
         file: act2/chapter1
-      - title: Sociology
+      - title: ESRD
         file: act2/chapter2
-      - title: Psychology
+      - title: Hospitalization
         file: act2/chapter3
 
   # Apollo
   - file: act3/part3
     sections:
-      - title: Déluge
+      - title: Estimates
         file: act3/act1
         sections:
           - title: Cosmic
@@ -34,7 +34,7 @@ chapters:
             file: act3/part1/part1_2
           - title: Life
             file: act3/part1/part1_3
-      - title: Gates
+      - title: Uncertainty
         file: act3/act2
         sections:
           - title: Man
@@ -43,7 +43,7 @@ chapters:
             file: act3/part2/part2_2
           - title: Salvation
             file: act3/part2/part2_3
-      - title: Flow
+      - title: Inferences
         file: act3/act3
         sections:
           - title: Happiness
