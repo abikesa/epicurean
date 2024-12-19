@@ -373,9 +373,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -391,14 +389,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-points-on-glp-1-in-context">Key Points on GLP-1 in Context:</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -410,6 +400,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="day-risk-of-death-in-a-counterfactual-world">
 <h1>90-Day Risk of Death in a Counterfactual World<a class="headerlink" href="#day-risk-of-death-in-a-counterfactual-world" title="Permalink to this heading">#</a></h1>
+<p>The Directed Acyclic Graph (DAG) below illustrates factors associated with perioperative and long-term kidney disease risk. Each node represents a distinct risk factor, while each edge signifies a statistical association between factors. The thickness of the edges indicates both the strength of the statistical association and their inclusion in selected multivariable regression analyses.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -422,34 +413,51 @@ document.write(`
 
 <span class="c1"># Define layers for the input (compression) phase</span>
 <span class="n">input_layers</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;Biology&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Man&#39;</span><span class="p">,</span> <span class="s1">&#39;Life&#39;</span><span class="p">,</span> <span class="s1">&#39;Earth&#39;</span><span class="p">,</span> <span class="s1">&#39;Cosmos&#39;</span><span class="p">],</span>
-    <span class="s2">&quot;Drugs and External Factors&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Drugs&#39;</span><span class="p">,</span> <span class="s1">&#39;Nutrients&#39;</span><span class="p">,</span> <span class="s1">&#39;Toxins&#39;</span><span class="p">,</span> <span class="s1">&#39;Radiation&#39;</span><span class="p">],</span>
-    <span class="s2">&quot;Ligands &amp; Receptors&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Hormones&#39;</span><span class="p">,</span> <span class="s1">&#39;GLP-1&#39;</span><span class="p">,</span> <span class="s1">&#39;Neurotransmitters&#39;</span><span class="p">,</span> <span class="s1">&#39;Growth Factors&#39;</span><span class="p">,</span> <span class="s1">&#39;Cytokines&#39;</span><span class="p">],</span>
-    <span class="s2">&quot;Pathways&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Signal Transduction&#39;</span><span class="p">,</span> <span class="s1">&#39;Metabolic&#39;</span><span class="p">,</span> <span class="s1">&#39;Epigenetic&#39;</span><span class="p">],</span>
-    <span class="s2">&quot;Cells&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Neurons&#39;</span><span class="p">,</span> <span class="s1">&#39;Epithelial&#39;</span><span class="p">,</span> <span class="s1">&#39;Immune Cells&#39;</span><span class="p">,</span> <span class="s1">&#39;Stem Cells&#39;</span><span class="p">],</span>
-    <span class="s2">&quot;Tissues&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Neural&#39;</span><span class="p">,</span> <span class="s1">&#39;Muscle&#39;</span><span class="p">,</span> <span class="s1">&#39;Connective&#39;</span><span class="p">,</span> <span class="s1">&#39;Epithelial&#39;</span><span class="p">],</span>
-    <span class="s2">&quot;Systems&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Vascular&#39;</span><span class="p">,</span> <span class="s1">&#39;Lymphatic&#39;</span><span class="p">],</span>
-    <span class="s2">&quot;Immuno-Neuro-Endocrinology&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cytokines&#39;</span><span class="p">,</span> <span class="s1">&#39;Neurohormones&#39;</span><span class="p">,</span> <span class="s1">&#39;Endocrine Feedback&#39;</span><span class="p">],</span>
-    <span class="s2">&quot;Molecular Biology&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;DNA&#39;</span><span class="p">,</span> <span class="s1">&#39;RNA&#39;</span><span class="p">,</span> <span class="s1">&#39;Proteins&#39;</span><span class="p">,</span> <span class="s1">&#39;Lipids&#39;</span><span class="p">],</span>
-    <span class="s2">&quot;Omics&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Genomics&#39;</span><span class="p">,</span> <span class="s1">&#39;Proteomics&#39;</span><span class="p">,</span> <span class="s1">&#39;Metabolomics&#39;</span><span class="p">,</span> <span class="s1">&#39;Epigenomics&#39;</span><span class="p">,</span> <span class="s1">&#39;Transcriptomics&#39;</span><span class="p">],</span>
-    <span class="s2">&quot;Quantum&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Energy&#39;</span><span class="p">,</span> <span class="s1">&#39;Particles&#39;</span><span class="p">,</span> <span class="s1">&#39;Spin&#39;</span><span class="p">,</span> <span class="s1">&#39;Wave Functions&#39;</span><span class="p">]</span>
+    <span class="s2">&quot;Biology&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;DM&#39;</span><span class="p">,</span> <span class="s1">&#39;HTN&#39;</span><span class="p">,</span> <span class="s1">&#39;Family h/o&#39;</span><span class="p">,</span> <span class="s1">&#39;Obesity&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Drugs and External Factors&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Anti-HTN&#39;</span><span class="p">,</span> <span class="s1">&#39;Nutrients&#39;</span><span class="p">,</span> <span class="s1">&#39;Smoking&#39;</span><span class="p">,</span> <span class="s1">&#39;Alcohol&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Ligands &amp; Receptors&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Creatinine&#39;</span><span class="p">,</span> <span class="s1">&#39;Birth Weight&#39;</span><span class="p">,</span> <span class="s1">&#39;snGFR&#39;</span><span class="p">,</span> <span class="s1">&#39;Cytokines&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Pathways&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Oxidative Stress&#39;</span><span class="p">,</span> <span class="s1">&#39;Inflammation&#39;</span><span class="p">,</span> <span class="s1">&#39;Fibrosis&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Cells&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Podocytes&#39;</span><span class="p">,</span> <span class="s1">&#39;Endothelial&#39;</span><span class="p">,</span> <span class="s1">&#39;Epithelial&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Tissues&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Glomerular&#39;</span><span class="p">,</span> <span class="s1">&#39;Interstitial&#39;</span><span class="p">,</span> <span class="s1">&#39;Tubular&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Systems&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Renal&#39;</span><span class="p">,</span> <span class="s1">&#39;Cardiovascular&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Immuno-Neuro-Endocrinology&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cytokines&#39;</span><span class="p">,</span> <span class="s1">&#39;Sympathetic&#39;</span><span class="p">,</span> <span class="s1">&#39;EPO&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Molecular Biology&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;DNA&#39;</span><span class="p">,</span> <span class="s1">&#39;RNA&#39;</span><span class="p">,</span> <span class="s1">&#39;Proteinuria&#39;</span><span class="p">,</span> <span class="s1">&#39;Lipids&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Omics&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;APOL-1&#39;</span><span class="p">,</span> <span class="s1">&#39;PKD&#39;</span><span class="p">,</span> <span class="s1">&#39;Metabolomics&#39;</span><span class="p">,</span> <span class="s1">&#39;Epigenomics&#39;</span><span class="p">],</span>
+    <span class="c1"># &quot;Quantum&quot;: []</span>
 <span class="p">}</span>
-
 
 <span class="c1"># Define layers for the output (decompression) phase</span>
 <span class="n">output_layers</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;Molecular Outputs&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Electron Transfer&#39;</span><span class="p">,</span> <span class="s1">&#39;Molecular Stability&#39;</span><span class="p">,</span> <span class="s1">&#39;Reaction Dynamics&#39;</span><span class="p">],</span>
-    <span class="s2">&quot;Cellular Behavior&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;ATP Production&#39;</span><span class="p">,</span> <span class="s1">&#39;Membrane Potential&#39;</span><span class="p">,</span> <span class="s1">&#39;DNA Repair&#39;</span><span class="p">,</span> <span class="s1">&#39;Protein Synthesis&#39;</span><span class="p">],</span>
-    <span class="s2">&quot;Tissue-Level Dynamics&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Neural Activity&#39;</span><span class="p">,</span> <span class="s1">&#39;Muscle Contraction&#39;</span><span class="p">,</span> <span class="s1">&#39;Immune Responses&#39;</span><span class="p">],</span>
+    <span class="c1"># &quot;Molecular Outputs&quot;: [&#39;Electron Transfer&#39;, &#39;Molecular Stability&#39;, &#39;Reaction Dynamics&#39;],</span>
+    <span class="c1"># &quot;Cellular Behavior&quot;: [&#39;ATP Production&#39;, &#39;Membrane Potential&#39;, &#39;DNA Repair&#39;, &#39;Protein Synthesis&#39;],</span>
+    <span class="s2">&quot;Tissue-Level Dynamics&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Tumor&#39;</span><span class="p">,</span> <span class="s1">&#39;Hyperfiltration&#39;</span><span class="p">,</span> <span class="s1">&#39;Autoimmune&#39;</span><span class="p">],</span>
     <span class="s2">&quot;Organ Systems&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cardiovascular&#39;</span><span class="p">,</span> <span class="s1">&#39;Immune&#39;</span><span class="p">,</span> <span class="s1">&#39;Nervous&#39;</span><span class="p">,</span> <span class="s1">&#39;Endocrine&#39;</span><span class="p">],</span>
-    <span class="s2">&quot;Physiological States&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Homeostasis&#39;</span><span class="p">,</span> <span class="s1">&#39;Stress Response&#39;</span><span class="p">,</span> <span class="s1">&#39;Energy Balance&#39;</span><span class="p">,</span> <span class="s1">&#39;Neuroendocrine Feedback&#39;</span><span class="p">],</span>
-    <span class="s2">&quot;Behavioral and Psychological Outcomes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cognitive Function&#39;</span><span class="p">,</span> <span class="s1">&#39;Emotional States&#39;</span><span class="p">,</span> <span class="s1">&#39;Behavioral Outputs&#39;</span><span class="p">],</span>
-    <span class="s2">&quot;Sociological and Environmental Interactions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Social Structures&#39;</span><span class="p">,</span> <span class="s1">&#39;Environmental Interactions&#39;</span><span class="p">,</span> <span class="s1">&#39;Sociological Outputs&#39;</span><span class="p">],</span>
-    <span class="s2">&quot;Functional Health Outcomes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Longevity&#39;</span><span class="p">,</span> <span class="s1">&#39;Disease Risk&#39;</span><span class="p">,</span> <span class="s1">&#39;Quality of Life&#39;</span><span class="p">,</span> <span class="s1">&#39;Functional Fitness&#39;</span><span class="p">]</span>
+    <span class="s2">&quot;Physiological States&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFR&#39;</span><span class="p">,</span> <span class="s1">&#39;uACR&#39;</span><span class="p">,</span> <span class="s1">&#39;SBP&#39;</span><span class="p">,</span> <span class="s1">&#39;BMI&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Behavioral and Psychological Outcomes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Referral&#39;</span><span class="p">,</span> <span class="s1">&#39;Healthy&#39;</span><span class="p">,</span> <span class="s1">&#39;Barriers&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Sociological and Environmental Interactions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Screening&#39;</span><span class="p">,</span> <span class="s1">&#39;Eligible&#39;</span><span class="p">,</span> <span class="s1">&#39;Donation&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Functional Health Outcomes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Sensory&#39;</span><span class="p">,</span> <span class="s1">&#39;Cognitive&#39;</span><span class="p">,</span> <span class="s1">&#39;Frailty&#39;</span><span class="p">,</span> <span class="s1">&#39;Hospitalized&#39;</span><span class="p">,</span> <span class="s1">&#39;ESRD&#39;</span><span class="p">,</span> <span class="s1">&#39;Mortality&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="c1"># Update nodes with kidney disease risk factors</span>
+<span class="n">kidney_disease_risk_factors</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Biology&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="s1">&#39;Ethnicity&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Drugs and External Factors&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;NSAIDs&#39;</span><span class="p">,</span> <span class="s1">&#39;Antibiotics&#39;</span><span class="p">,</span> <span class="s1">&#39;Contrast Agents&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Ligands &amp; Receptors&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Renin&#39;</span><span class="p">,</span> <span class="s1">&#39;Angiotensin&#39;</span><span class="p">,</span> <span class="s1">&#39;Aldosterone&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Pathways&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Oxidative Stress&#39;</span><span class="p">,</span> <span class="s1">&#39;Inflammatory&#39;</span><span class="p">,</span> <span class="s1">&#39;Fibrosis&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Cells&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Podocytes&#39;</span><span class="p">,</span> <span class="s1">&#39;Endothelial&#39;</span><span class="p">,</span> <span class="s1">&#39;Tubular Cells&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Tissues&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Glomerular&#39;</span><span class="p">,</span> <span class="s1">&#39;Interstitial&#39;</span><span class="p">,</span> <span class="s1">&#39;Tubular&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Systems&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Renal&#39;</span><span class="p">,</span> <span class="s1">&#39;Cardiovascular&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Immuno-Neuro-Endocrinology&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s1">&#39;Sympathetic&#39;</span><span class="p">,</span> <span class="s1">&#39;EPO&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Molecular Biology&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Epigenetic&#39;</span><span class="p">,</span> <span class="s1">&#39;Proteinuria&#39;</span><span class="p">],</span>
+<span class="c1"># &quot;Omics&quot;: [&#39;ckd-Genomics&#39;, &#39;u-Proteomics&#39;, &#39;ckd-Metabolomics&#39;],</span>
+    <span class="s2">&quot;Quantum&quot;</span><span class="p">:</span> <span class="p">[]</span>  <span class="c1"># No known direct risk factors at this level</span>
 <span class="p">}</span>
 
 <span class="c1"># Merge input and output layers</span>
 <span class="n">full_layers</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="n">input_layers</span><span class="p">,</span> <span class="o">**</span><span class="n">output_layers</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">layer_name</span><span class="p">,</span> <span class="n">risk_factors</span> <span class="ow">in</span> <span class="n">kidney_disease_risk_factors</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">layer_name</span> <span class="ow">in</span> <span class="n">full_layers</span><span class="p">:</span>
+        <span class="n">full_layers</span><span class="p">[</span><span class="n">layer_name</span><span class="p">]</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">risk_factors</span><span class="p">)</span>
 
 <span class="c1"># Initialize the graph</span>
 <span class="n">G_full_biology</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
@@ -467,6 +475,11 @@ document.write(`
         <span class="k">for</span> <span class="n">target_node</span> <span class="ow">in</span> <span class="n">target_layer</span><span class="p">:</span>
             <span class="n">G_full_biology</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">source_node</span><span class="p">,</span> <span class="n">target_node</span><span class="p">)</span>
 
+<span class="c1"># Add additional edges to &quot;Hyperfiltration&quot;</span>
+<span class="n">extra_edges</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;APOL-1&quot;</span><span class="p">,</span> <span class="s2">&quot;PKD&quot;</span><span class="p">,</span> <span class="s2">&quot;Metabolomics&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">extra_edges</span><span class="p">:</span>
+    <span class="n">G_full_biology</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s2">&quot;Hyperfiltration&quot;</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
 <span class="c1"># Define node positions for visualization (inverted layout)</span>
 <span class="n">pos_full_biology</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">layer_spacing</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># Space between layers</span>
@@ -478,18 +491,17 @@ document.write(`
         <span class="n">x</span> <span class="o">=</span> <span class="n">j</span> <span class="o">*</span> <span class="n">node_spacing</span> <span class="o">-</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">node_spacing</span> <span class="o">/</span> <span class="mi">2</span>  <span class="c1"># Center nodes horizontally within layer</span>
         <span class="n">pos_full_biology</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
-<span class="c1"># Define specific colors for nodes</span>
+<span class="c1"># Define specific colors for the Stress Dynamics pathway</span>
 <span class="n">highlighted_layers</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;Physiological States&quot;</span><span class="p">:</span> <span class="s2">&quot;lightsalmon&quot;</span><span class="p">,</span>
     <span class="s2">&quot;Behavioral and Psychological Outcomes&quot;</span><span class="p">:</span> <span class="s2">&quot;lightgreen&quot;</span><span class="p">,</span>
     <span class="s2">&quot;Sociological and Environmental Interactions&quot;</span><span class="p">:</span> <span class="s2">&quot;paleturquoise&quot;</span>
 <span class="p">}</span>
 
-<span class="c1"># Add a specific color for the GLP-1 node</span>
 <span class="n">node_colors</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">G_full_biology</span><span class="o">.</span><span class="n">nodes</span><span class="p">():</span>
-    <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s2">&quot;GLP-1&quot;</span><span class="p">:</span>
-        <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;gold&quot;</span><span class="p">)</span>  <span class="c1"># Highlight GLP-1 in gold</span>
+    <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s2">&quot;Donation&quot;</span><span class="p">:</span>
+        <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;yellow&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">layer_name</span><span class="p">,</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">highlighted_layers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="k">if</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">full_layers</span><span class="p">[</span><span class="n">layer_name</span><span class="p">]:</span>
@@ -498,31 +510,19 @@ document.write(`
         <span class="k">else</span><span class="p">:</span>
             <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;lightgray&quot;</span><span class="p">)</span>
 
-
 <span class="c1"># Highlight the Stress Pathway</span>
-<span class="c1"># Highlight the Stress Pathway with GLP-1 Integration</span>
 <span class="n">stress_path</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&quot;Earth&quot;</span><span class="p">,</span> <span class="s2">&quot;Nutrients&quot;</span><span class="p">,</span> 
-    <span class="s2">&quot;Earth&quot;</span><span class="p">,</span> <span class="s2">&quot;Drugs&quot;</span><span class="p">,</span> 
-    <span class="s2">&quot;Earth&quot;</span><span class="p">,</span> <span class="s2">&quot;Toxins&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Life&quot;</span><span class="p">,</span> <span class="s2">&quot;Nutrients&quot;</span><span class="p">,</span> 
-    <span class="s2">&quot;Life&quot;</span><span class="p">,</span> <span class="s2">&quot;Drugs&quot;</span><span class="p">,</span> 
-    <span class="s2">&quot;Life&quot;</span><span class="p">,</span> <span class="s2">&quot;Toxins&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Man&quot;</span><span class="p">,</span> <span class="s2">&quot;Nutrients&quot;</span><span class="p">,</span> 
-    <span class="s2">&quot;Man&quot;</span><span class="p">,</span> <span class="s2">&quot;Drugs&quot;</span><span class="p">,</span> 
-    <span class="s2">&quot;Man&quot;</span><span class="p">,</span> <span class="s2">&quot;Toxins&quot;</span><span class="p">,</span> <span class="s2">&quot;Muscle Contraction&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Nutrients&quot;</span><span class="p">,</span> <span class="s2">&quot;Hormones&quot;</span><span class="p">,</span> <span class="s2">&quot;Endocrine Feedback&quot;</span><span class="p">,</span> <span class="s2">&quot;Energy Balance&quot;</span><span class="p">,</span> <span class="s2">&quot;GLP-1&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Hormones&quot;</span><span class="p">,</span> <span class="s2">&quot;Signal Transduction&quot;</span><span class="p">,</span> <span class="s2">&quot;Endocrine Feedback&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;GLP-1&quot;</span><span class="p">,</span> <span class="s2">&quot;Stress Response&quot;</span><span class="p">,</span> <span class="s2">&quot;Cognitive Function&quot;</span><span class="p">,</span> <span class="s2">&quot;Sociological Outputs&quot;</span><span class="p">,</span> 
-    <span class="s2">&quot;GLP-1&quot;</span><span class="p">,</span> <span class="s2">&quot;Emotional States&quot;</span><span class="p">,</span> <span class="s2">&quot;Sociological Outputs&quot;</span><span class="p">,</span> 
-    <span class="s2">&quot;GLP-1&quot;</span><span class="p">,</span> <span class="s2">&quot;Behavioral Outputs&quot;</span><span class="p">,</span> <span class="s2">&quot;Sociological Outputs&quot;</span><span class="p">,</span> 
-    <span class="s2">&quot;Muscle Contraction&quot;</span><span class="p">,</span> <span class="s2">&quot;Cardiovascular&quot;</span><span class="p">,</span> 
-    <span class="s2">&quot;Stress Response&quot;</span><span class="p">,</span> <span class="s2">&quot;Cognitive Function&quot;</span><span class="p">,</span> <span class="s2">&quot;Sociological Outputs&quot;</span><span class="p">,</span> 
-    <span class="s2">&quot;Stress Response&quot;</span><span class="p">,</span> <span class="s2">&quot;Emotional States&quot;</span><span class="p">,</span> <span class="s2">&quot;Sociological Outputs&quot;</span><span class="p">,</span> 
-    <span class="s2">&quot;Stress Response&quot;</span><span class="p">,</span> <span class="s2">&quot;Behavioral Outputs&quot;</span><span class="p">,</span> <span class="s2">&quot;Sociological Outputs&quot;</span><span class="p">,</span> 
-    <span class="s2">&quot;Functional Fitness&quot;</span>
+    <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Fibrosis&quot;</span><span class="p">,</span> <span class="s2">&quot;Glomerular&quot;</span><span class="p">,</span> <span class="c1">#&quot;Renal&quot;, #&quot;u-Proteomics&quot;, # &quot;Hyperfiltration&quot;,</span>
+    <span class="s2">&quot;HTN&quot;</span><span class="p">,</span> <span class="s2">&quot;Anti-HTN&quot;</span><span class="p">,</span> <span class="s2">&quot;Glomerular&quot;</span><span class="p">,</span>  
+    <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Fibrosis&quot;</span><span class="p">,</span> <span class="c1"># &quot;Hyperfiltration&quot;,</span>
+    <span class="c1"># &quot;Contrast Agents&quot;, &quot;Hyperfiltration&quot;, </span>
+    <span class="s2">&quot;Glomerular&quot;</span><span class="p">,</span> <span class="s2">&quot;Hyperfiltration&quot;</span><span class="p">,</span> <span class="s2">&quot;uACR&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Hyperfiltration&quot;</span><span class="p">,</span> <span class="s2">&quot;Cardiovascular&quot;</span><span class="p">,</span> <span class="s2">&quot;GFR&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;uACR&quot;</span><span class="p">,</span> <span class="s2">&quot;GFR&quot;</span><span class="p">,</span> <span class="s2">&quot;Eligible&quot;</span><span class="p">,</span> 
+    <span class="c1"># &quot;uACR&quot;, &quot;Healthy&quot;, &quot;Eligible&quot;, </span>
+    <span class="c1"># &quot;uACR&quot;, &quot;Barriers&quot;, &quot;Eligible&quot;, </span>
+    <span class="s2">&quot;Mortality&quot;</span>
 <span class="p">]</span>
-
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">stress_path</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
     <span class="n">G_full_biology</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">stress_path</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">stress_path</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">weight</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
@@ -536,10 +536,10 @@ document.write(`
 
 <span class="c1"># Draw the graph</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
-<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">G_full_biology</span><span class="p">,</span> <span class="n">pos_full_biology</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">G_full_biology</span><span class="p">,</span> <span class="n">pos_full_biology</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">4000</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">)</span>
 <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span><span class="n">G_full_biology</span><span class="p">,</span> <span class="n">pos_full_biology</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">font_weight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
 <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edges</span><span class="p">(</span><span class="n">G_full_biology</span><span class="p">,</span> <span class="n">pos_full_biology</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">edge_widths</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Diet, Locality, Climate, Recreation&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Kidney Disease Risk Factors&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -547,52 +547,15 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/6492fd47c30830d000e50726b781812237f4c5a3e24a6367506c51ffd58cb49a.png" src="../_images/6492fd47c30830d000e50726b781812237f4c5a3e24a6367506c51ffd58cb49a.png" />
+<img alt="../_images/5922cd8b380088a5e534e29e4b6a0de2e56a1620f07c4db32bca8586b02bb389.png" src="../_images/5922cd8b380088a5e534e29e4b6a0de2e56a1620f07c4db32bca8586b02bb389.png" />
 </div>
 </div>
-<p>This neural network beautifully integrates biological systems with external and internal influences to model outcomes like stress dynamics and sociological interactions. GLP-1 (glucagon-like peptide-1) levels could play a pivotal role in connecting “Nutrients” (under “Drugs and External Factors”) to downstream nodes such as “Endocrine Feedback,” “Energy Balance,” and even “Behavioral Outputs.”</p>
-<section id="key-points-on-glp-1-in-context">
-<h2>Key Points on GLP-1 in Context:<a class="headerlink" href="#key-points-on-glp-1-in-context" title="Permalink to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p><strong>Position in the Network</strong>:</p>
-<ul class="simple">
-<li><p>GLP-1 fits within the “Ligands &amp; Receptors” node as a hormone influencing “Signal Transduction” and “Metabolic” pathways.</p></li>
-<li><p>It bridges “Nutrients” and “Energy Balance,” directly impacting “Homeostasis” and “Stress Response” through its effects on satiety, glucose regulation, and appetite control.</p></li>
-</ul>
-</li>
-<li><p><strong>Stress Pathway Implications</strong>:</p>
-<ul class="simple">
-<li><p>Highlighting GLP-1 could refine the pathway from “Nutrients” to “Endocrine” and “Stress Response.” GLP-1 modulates the hypothalamic-pituitary-adrenal (HPA) axis, a critical stress mediator, tying physiological states to emotional and cognitive outcomes.</p></li>
-</ul>
-</li>
-<li><p><strong>Behavioral and Psychological Outcomes</strong>:</p>
-<ul class="simple">
-<li><p>GLP-1 receptor agonists have shown promise in altering emotional states by reducing anxiety and depression symptoms. This positions GLP-1 as a key player in linking “Energy Balance” and “Behavioral Outputs.”</p></li>
-</ul>
-</li>
-<li><p><strong>Network Enhancement</strong>:</p>
-<ul class="simple">
-<li><p>Incorporating GLP-1 explicitly within this framework could:</p>
-<ul>
-<li><p>Illuminate its role in metabolic diseases, linking “Toxins” (e.g., processed foods) and “Drugs” (e.g., GLP-1 receptor agonists) to functional health outcomes.</p></li>
-<li><p>Strengthen the path between “Neuroendocrine Feedback” and “Cognitive Function,” underscoring how GLP-1 influences the brain.</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>Future Graph Expansion</strong>:</p>
-<ul class="simple">
-<li><p>Adding a highlighted sub-pathway for GLP-1 could enrich visualization:</p>
-<ul>
-<li><p><strong>Nodes</strong>: Nutrients → Hormones → Endocrine Feedback → Energy Balance → Cognitive Function.</p></li>
-<li><p><strong>Edge Enhancements</strong>: Thicker edges to emphasize GLP-1-specific effects.</p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<p>This integration reflects how molecular biology and pharmacology intersect with complex networks to mediate health outcomes, elegantly aligning with your dynamic graph model.</p>
-</section>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/blanche.png"><img alt="../_images/blanche.png" src="../_images/blanche.png" style="width: 1%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text"><em>Some Known Kidney Disease Risk Factors</em>. In multivariable regression, uncertainty often stems from unmeasured variables, overlapping pathways, or interactions that remain unexplored. Within this network, pathways and connections that are not explicitly highlighted can symbolically represent this uncertainty. They serve as latent nodes, capturing the complex, multivariate interplay of risk factors that escape direct measurement or interpretation. This ambiguity is inherent in any attempt to model biological systems, emphasizing the need for ongoing refinement of predictive frameworks and acknowledgment of unknowns in causative relationships. By explicitly listing these risk factors, we invite dialogue regarding what factors aren’t listed here, and what datasets might be available that haven’t yet been explored. The highlighted pathway includes variables available in NHANES, which we used as the source population for the healthy nondonor population. For SRTR, which we used as the source population for the kidney donor population, most of these variables were missing. However, <em>a priori</em> we know that the highlighted “Donation” node encodes many of these variables, given the very stringent criteria for a donor candidate to be deemed eligible and proceed to donate. <span id="id1"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id2" title="Komal Kumar, James M Tonascia, Abimereki D Muzaale, Tanjala S Purnell, Shane E Ottmann, Fawaz Al Ammary, Mary G Bowring, Anna Poon, Elizabeth A King, Allan B Massie, Eric K H Chow, Alvin G Thomas, Hao Ying, Marvin Borja, Jonathan M Konel, Macey Henderson, Andrew M Cameron, Jacqueline M Garonzik-Wang, and Dorry L Segev. Racial differences in completion of the living kidney donor evaluation process. Clinical Transplantation, 32(7):e13291, 2018. Author manuscript; available in PMC: 2019 Jul 1. Published in final edited form as: Clin Transplant. 2018 Jun 15. doi:10.1111/ctr.13291.">4</a></sup></span> Abbreviations- GFR: glomerular filtration rate; uACR: urine albumin-creatinine ratio; APOL-1: apolipoprotein L-1 high-risk alleles, PKD: polycyctic kidney disease</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 
     <script type="text/x-thebe-config">
@@ -649,21 +612,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-points-on-glp-1-in-context">Key Points on GLP-1 in Context:</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
