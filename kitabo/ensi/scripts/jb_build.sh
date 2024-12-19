@@ -4,6 +4,8 @@
 echo "Enter your commit message:"
 read commit_message
 
+source ../../../myenv/bin/activate
+
 # Clean the Jupyter Book
 jb clean .
 

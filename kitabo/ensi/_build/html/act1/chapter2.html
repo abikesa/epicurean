@@ -373,7 +373,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -389,6 +391,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-factors-for-chronic-kidney-disease">Risk Factors for Chronic Kidney Disease</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#screening-for-eligibility-to-be-a-donors">Screening for Eligibility to be a Donors</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -400,6 +411,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="day-risk-of-death-in-a-counterfactual-world">
 <h1>90-Day Risk of Death in a Counterfactual World<a class="headerlink" href="#day-risk-of-death-in-a-counterfactual-world" title="Permalink to this heading">#</a></h1>
+<section id="risk-factors-for-chronic-kidney-disease">
+<h2>Risk Factors for Chronic Kidney Disease<a class="headerlink" href="#risk-factors-for-chronic-kidney-disease" title="Permalink to this heading">#</a></h2>
 <p>The Directed Acyclic Graph (DAG) below illustrates factors associated with perioperative and long-term kidney disease risk. Each node represents a distinct risk factor, while each edge signifies a statistical association between factors. The thickness of the edges indicates both the strength of the statistical association and their inclusion in selected multivariable regression analyses.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -550,21 +563,17 @@ document.write(`
 <img alt="../_images/5922cd8b380088a5e534e29e4b6a0de2e56a1620f07c4db32bca8586b02bb389.png" src="../_images/5922cd8b380088a5e534e29e4b6a0de2e56a1620f07c4db32bca8586b02bb389.png" />
 </div>
 </div>
-<figure class="align-default" id="id2">
+<figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="../_images/blanche.png"><img alt="../_images/blanche.png" src="../_images/blanche.png" style="width: 1%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text"><em>Some Known Kidney Disease Risk Factors</em>. In multivariable regression, uncertainty often arises from unmeasured variables, overlapping pathways, or interactions that remain unexplored. Within this analytical framework, pathways and connections not explicitly highlighted can symbolically represent this uncertainty. These latent nodes capture the intricate, multivariate interplay of risk factors that elude direct measurement or interpretation. This ambiguity is inherent in modeling biological systems and underscores the need for ongoing refinement of predictive frameworks while acknowledging the limits of causative understanding. By explicitly listing known risk factors, we aim to spark dialogue about factors not represented here and encourage exploration of datasets that remain untapped. For this analysis, we utilized NHANES as the source population for the healthy nondonor cohort. NHANES includes a robust dataset that allows us to highlight key pathways. In contrast, SRTR, our source for the kidney donor population, lacks many of these variables. However, <em>a priori</em>, we recognize that the “Donation” node inherently encodes many of these variables, reflecting the stringent criteria required for donor candidates to be approved and proceed with donation. <span id="id1"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id3" title="Komal Kumar, James M Tonascia, Abimereki D Muzaale, Tanjala S Purnell, Shane E Ottmann, Fawaz Al Ammary, Mary G Bowring, Anna Poon, Elizabeth A King, Allan B Massie, Eric K H Chow, Alvin G Thomas, Hao Ying, Marvin Borja, Jonathan M Konel, Macey Henderson, Andrew M Cameron, Jacqueline M Garonzik-Wang, and Dorry L Segev. Racial differences in completion of the living kidney donor evaluation process. Clinical Transplantation, 32(7):e13291, 2018. Author manuscript; available in PMC: 2019 Jul 1. Published in final edited form as: Clin Transplant. 2018 Jun 15. doi:10.1111/ctr.13291.">5</a></sup></span> This approach helps bridge gaps between these populations, offering a clearer perspective on donation-attributable risk. Below are the key variables highlighted in the NHANES dataset:</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
-<div class="legend">
-<p><strong>Abbreviations:</strong><br />
-GFR: Glomerular filtration rate</p>
-<ul class="simple">
-<li><p>uACR: Urine albumin-creatinine ratio</p></li>
-<li><p>APOL1: Apolipoprotein L-1 high-risk alleles</p></li>
-<li><p>PKD: Polycystic kidney disease</p></li>
-</ul>
-</div>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text"><em>Some Known Kidney Disease Risk Factors</em>. We’ve developed an App that draws from these risk factors to simulate the process of estimating eligibility in donor candidates.  In multivariable regression, uncertainty often arises from unmeasured variables, overlapping pathways, or interactions that remain unexplored. Within this analytical framework, pathways and connections not explicitly highlighted can symbolically represent this uncertainty. These latent nodes capture the intricate, multivariate interplay of risk factors that elude direct measurement or interpretation. This ambiguity is inherent in modeling biological systems and underscores the need for ongoing refinement of predictive frameworks while acknowledging the limits of causative understanding. By explicitly listing known risk factors, we aim to spark dialogue about factors not represented here and encourage exploration of datasets that remain untapped. For this analysis, we utilized NHANES as the source population for the healthy nondonor cohort. NHANES includes a robust dataset that allows us to highlight key pathways. In contrast, SRTR, our source for the kidney donor population, lacks many of these variables. However, <em>a priori</em>, we recognize that the “Donation” node inherently encodes many of these variables, reflecting the stringent criteria required for donor candidates to be approved and proceed with donation. <span id="id1"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id5" title="Komal Kumar, James M Tonascia, Abimereki D Muzaale, Tanjala S Purnell, Shane E Ottmann, Fawaz Al Ammary, Mary G Bowring, Anna Poon, Elizabeth A King, Allan B Massie, Eric K H Chow, Alvin G Thomas, Hao Ying, Marvin Borja, Jonathan M Konel, Macey Henderson, Andrew M Cameron, Jacqueline M Garonzik-Wang, and Dorry L Segev. Racial differences in completion of the living kidney donor evaluation process. Clinical Transplantation, 32(7):e13291, 2018. Author manuscript; available in PMC: 2019 Jul 1. Published in final edited form as: Clin Transplant. 2018 Jun 15. doi:10.1111/ctr.13291.">5</a></sup></span> This approach helps bridge gaps between these populations, offering a clearer perspective on donation-attributable risk. Below are the key variables highlighted in the NHANES dataset: <strong>Abbreviations:</strong> GFR: Glomerular filtration rate; uACR: Urine albumin-creatinine ratio; APOL1: Apolipoprotein L-1 high-risk alleles; and PKD: Polycystic kidney disease .</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+</section>
+<section id="screening-for-eligibility-to-be-a-donors">
+<h2>Screening for Eligibility to be a Donors<a class="headerlink" href="#screening-for-eligibility-to-be-a-donors" title="Permalink to this heading">#</a></h2>
+<p>This process relies on screening for individual risk factors for ESRD. <span id="id2"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id3" title="Morgan E. Grams, Yingying Sang, Andrew S. Levey, Kunihiro Matsushita, Shoshana Ballew, Alex R. Chang, Eric K. H. Chow, Bertram L. Kasiske, Csaba P. Kovesdy, Girish N. Nadkarni, Varda Shalev, Dorry L. Segev, Josef Coresh, Krista L. Lentine, and Amit X. Garg; Chronic Kidney Disease Prognosis Consortium. Kidney-failure risk projection for the living kidney-donor candidate. New England Journal of Medicine, 374(5):411-421, February 2016. URL: https://doi.org/10.1056/NEJMoa1510491, doi:10.1056/NEJMoa1510491.">6</a></sup></span> To support an empirical approach to donor selection, our app incorporates these health characteristics to estimate a person’s perioperative risk of death and long-term risk of hospitalization, ESRD, and death.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -621,6 +630,22 @@ GFR: Glomerular filtration rate</p>
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-factors-for-chronic-kidney-disease">Risk Factors for Chronic Kidney Disease</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#screening-for-eligibility-to-be-a-donors">Screening for Eligibility to be a Donors</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
