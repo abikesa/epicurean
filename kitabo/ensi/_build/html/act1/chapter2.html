@@ -1,0 +1,667 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>90-Day Risk of Death in a Counterfactual World &#8212; Epicurean</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'act1/chapter2';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="90-Day Risk Attributable to Living Kidney Donation" href="chapter3.html" />
+    <link rel="prev" title="90-Day Risk of Death Following Living Kidney Donation" href="chapter1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://www.tmc.edu/news/wp-content/uploads/sites/2/2019/08/kidney-copy.jpg" class="logo__image only-light" alt="Epicurean - Home"/>
+    <script>document.write(`<img src="https://www.tmc.edu/news/wp-content/uploads/sites/2/2019/08/kidney-copy.jpg" class="logo__image only-dark" alt="Epicurean - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Risks After Donation
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="part1.html">Perioperative Risk</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter1.html">Donor Risk</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Nondonor Risk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3.html">Attributable Risk</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../act2/part2.html">Long-Term Risk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../act2/chapter1.html">Mortality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../act2/chapter2.html">ESRD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../act2/chapter3.html">Hospitalization</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../act3/part3.html">Individualized</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act1.html">Estimates</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_1.html">Cosmic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_2.html">Earth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_3.html">Life</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act2.html">Uncertainty</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_1.html">Man</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_2.html">Fall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_3.html">Salvation</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act3.html">Inferences</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_1.html">Happiness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_2.html">Iteration</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../act3/part3/part3_3.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/abikesa/template/main?urlpath=tree/book/website/act1/chapter2.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/act1/chapter2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>90-Day Risk of Death in a Counterfactual World</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="day-risk-of-death-in-a-counterfactual-world">
+<h1>90-Day Risk of Death in a Counterfactual World<a class="headerlink" href="#day-risk-of-death-in-a-counterfactual-world" title="Permalink to this heading">#</a></h1>
+<p>The Directed Acyclic Graph (DAG) below illustrates factors associated with perioperative and long-term kidney disease risk. Each node represents a distinct risk factor, while each edge signifies a statistical association between factors. The thickness of the edges indicates both the strength of the statistical association and their inclusion in selected multivariable regression analyses.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Define layers for the input (compression) phase</span>
+<span class="n">input_layers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Biology&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;DM&#39;</span><span class="p">,</span> <span class="s1">&#39;HTN&#39;</span><span class="p">,</span> <span class="s1">&#39;Family h/o&#39;</span><span class="p">,</span> <span class="s1">&#39;Obesity&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Drugs and External Factors&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Anti-HTN&#39;</span><span class="p">,</span> <span class="s1">&#39;Nutrients&#39;</span><span class="p">,</span> <span class="s1">&#39;Smoking&#39;</span><span class="p">,</span> <span class="s1">&#39;Alcohol&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Ligands &amp; Receptors&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Creatinine&#39;</span><span class="p">,</span> <span class="s1">&#39;Birth Weight&#39;</span><span class="p">,</span> <span class="s1">&#39;snGFR&#39;</span><span class="p">,</span> <span class="s1">&#39;Cytokines&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Pathways&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Oxidative Stress&#39;</span><span class="p">,</span> <span class="s1">&#39;Inflammation&#39;</span><span class="p">,</span> <span class="s1">&#39;Fibrosis&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Cells&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Podocytes&#39;</span><span class="p">,</span> <span class="s1">&#39;Endothelial&#39;</span><span class="p">,</span> <span class="s1">&#39;Epithelial&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Tissues&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Glomerular&#39;</span><span class="p">,</span> <span class="s1">&#39;Interstitial&#39;</span><span class="p">,</span> <span class="s1">&#39;Tubular&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Systems&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Renal&#39;</span><span class="p">,</span> <span class="s1">&#39;Cardiovascular&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Immuno-Neuro-Endocrinology&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cytokines&#39;</span><span class="p">,</span> <span class="s1">&#39;Sympathetic&#39;</span><span class="p">,</span> <span class="s1">&#39;EPO&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Molecular Biology&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;DNA&#39;</span><span class="p">,</span> <span class="s1">&#39;RNA&#39;</span><span class="p">,</span> <span class="s1">&#39;Proteinuria&#39;</span><span class="p">,</span> <span class="s1">&#39;Lipids&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Omics&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;APOL-1&#39;</span><span class="p">,</span> <span class="s1">&#39;PKD&#39;</span><span class="p">,</span> <span class="s1">&#39;Metabolomics&#39;</span><span class="p">,</span> <span class="s1">&#39;Epigenomics&#39;</span><span class="p">],</span>
+    <span class="c1"># &quot;Quantum&quot;: []</span>
+<span class="p">}</span>
+
+<span class="c1"># Define layers for the output (decompression) phase</span>
+<span class="n">output_layers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1"># &quot;Molecular Outputs&quot;: [&#39;Electron Transfer&#39;, &#39;Molecular Stability&#39;, &#39;Reaction Dynamics&#39;],</span>
+    <span class="c1"># &quot;Cellular Behavior&quot;: [&#39;ATP Production&#39;, &#39;Membrane Potential&#39;, &#39;DNA Repair&#39;, &#39;Protein Synthesis&#39;],</span>
+    <span class="s2">&quot;Tissue-Level Dynamics&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Tumor&#39;</span><span class="p">,</span> <span class="s1">&#39;Hyperfiltration&#39;</span><span class="p">,</span> <span class="s1">&#39;Autoimmune&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Organ Systems&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cardiovascular&#39;</span><span class="p">,</span> <span class="s1">&#39;Immune&#39;</span><span class="p">,</span> <span class="s1">&#39;Nervous&#39;</span><span class="p">,</span> <span class="s1">&#39;Endocrine&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Physiological States&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GFR&#39;</span><span class="p">,</span> <span class="s1">&#39;uACR&#39;</span><span class="p">,</span> <span class="s1">&#39;SBP&#39;</span><span class="p">,</span> <span class="s1">&#39;BMI&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Behavioral and Psychological Outcomes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Referral&#39;</span><span class="p">,</span> <span class="s1">&#39;Healthy&#39;</span><span class="p">,</span> <span class="s1">&#39;Barriers&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Sociological and Environmental Interactions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Screening&#39;</span><span class="p">,</span> <span class="s1">&#39;Eligible&#39;</span><span class="p">,</span> <span class="s1">&#39;Donation&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Functional Health Outcomes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Sensory&#39;</span><span class="p">,</span> <span class="s1">&#39;Cognitive&#39;</span><span class="p">,</span> <span class="s1">&#39;Frailty&#39;</span><span class="p">,</span> <span class="s1">&#39;Hospitalized&#39;</span><span class="p">,</span> <span class="s1">&#39;ESRD&#39;</span><span class="p">,</span> <span class="s1">&#39;Mortality&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="c1"># Update nodes with kidney disease risk factors</span>
+<span class="n">kidney_disease_risk_factors</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Biology&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="s1">&#39;Ethnicity&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Drugs and External Factors&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;NSAIDs&#39;</span><span class="p">,</span> <span class="s1">&#39;Antibiotics&#39;</span><span class="p">,</span> <span class="s1">&#39;Contrast Agents&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Ligands &amp; Receptors&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Renin&#39;</span><span class="p">,</span> <span class="s1">&#39;Angiotensin&#39;</span><span class="p">,</span> <span class="s1">&#39;Aldosterone&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Pathways&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Oxidative Stress&#39;</span><span class="p">,</span> <span class="s1">&#39;Inflammatory&#39;</span><span class="p">,</span> <span class="s1">&#39;Fibrosis&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Cells&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Podocytes&#39;</span><span class="p">,</span> <span class="s1">&#39;Endothelial&#39;</span><span class="p">,</span> <span class="s1">&#39;Tubular Cells&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Tissues&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Glomerular&#39;</span><span class="p">,</span> <span class="s1">&#39;Interstitial&#39;</span><span class="p">,</span> <span class="s1">&#39;Tubular&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Systems&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Renal&#39;</span><span class="p">,</span> <span class="s1">&#39;Cardiovascular&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Immuno-Neuro-Endocrinology&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s1">&#39;Sympathetic&#39;</span><span class="p">,</span> <span class="s1">&#39;EPO&#39;</span><span class="p">],</span>
+    <span class="s2">&quot;Molecular Biology&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Epigenetic&#39;</span><span class="p">,</span> <span class="s1">&#39;Proteinuria&#39;</span><span class="p">],</span>
+<span class="c1"># &quot;Omics&quot;: [&#39;ckd-Genomics&#39;, &#39;u-Proteomics&#39;, &#39;ckd-Metabolomics&#39;],</span>
+    <span class="s2">&quot;Quantum&quot;</span><span class="p">:</span> <span class="p">[]</span>  <span class="c1"># No known direct risk factors at this level</span>
+<span class="p">}</span>
+
+<span class="c1"># Merge input and output layers</span>
+<span class="n">full_layers</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="n">input_layers</span><span class="p">,</span> <span class="o">**</span><span class="n">output_layers</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">layer_name</span><span class="p">,</span> <span class="n">risk_factors</span> <span class="ow">in</span> <span class="n">kidney_disease_risk_factors</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">layer_name</span> <span class="ow">in</span> <span class="n">full_layers</span><span class="p">:</span>
+        <span class="n">full_layers</span><span class="p">[</span><span class="n">layer_name</span><span class="p">]</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">risk_factors</span><span class="p">)</span>
+
+<span class="c1"># Initialize the graph</span>
+<span class="n">G_full_biology</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+
+<span class="c1"># Add nodes for each layer</span>
+<span class="k">for</span> <span class="n">layer_name</span><span class="p">,</span> <span class="n">nodes</span> <span class="ow">in</span> <span class="n">full_layers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">G_full_biology</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="n">layer_name</span><span class="p">)</span>
+
+<span class="c1"># Connect layers sequentially</span>
+<span class="n">layer_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">full_layers</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">layer_names</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">source_layer</span> <span class="o">=</span> <span class="n">full_layers</span><span class="p">[</span><span class="n">layer_names</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+    <span class="n">target_layer</span> <span class="o">=</span> <span class="n">full_layers</span><span class="p">[</span><span class="n">layer_names</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]]</span>
+    <span class="k">for</span> <span class="n">source_node</span> <span class="ow">in</span> <span class="n">source_layer</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">target_node</span> <span class="ow">in</span> <span class="n">target_layer</span><span class="p">:</span>
+            <span class="n">G_full_biology</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">source_node</span><span class="p">,</span> <span class="n">target_node</span><span class="p">)</span>
+
+<span class="c1"># Add additional edges to &quot;Hyperfiltration&quot;</span>
+<span class="n">extra_edges</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;APOL-1&quot;</span><span class="p">,</span> <span class="s2">&quot;PKD&quot;</span><span class="p">,</span> <span class="s2">&quot;Metabolomics&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">extra_edges</span><span class="p">:</span>
+    <span class="n">G_full_biology</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s2">&quot;Hyperfiltration&quot;</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Define node positions for visualization (inverted layout)</span>
+<span class="n">pos_full_biology</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">layer_spacing</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># Space between layers</span>
+<span class="n">node_spacing</span> <span class="o">=</span> <span class="mf">1.5</span>  <span class="c1"># Space between nodes within a layer</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">layer_name</span><span class="p">,</span> <span class="n">nodes</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">full_layers</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">layer_spacing</span> <span class="o">-</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">layer_names</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">layer_spacing</span> <span class="o">/</span> <span class="mi">2</span>  <span class="c1"># Inverted vertical alignment</span>
+    <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">node</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nodes</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">j</span> <span class="o">*</span> <span class="n">node_spacing</span> <span class="o">-</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">node_spacing</span> <span class="o">/</span> <span class="mi">2</span>  <span class="c1"># Center nodes horizontally within layer</span>
+        <span class="n">pos_full_biology</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Define specific colors for the Stress Dynamics pathway</span>
+<span class="n">highlighted_layers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Physiological States&quot;</span><span class="p">:</span> <span class="s2">&quot;lightsalmon&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Behavioral and Psychological Outcomes&quot;</span><span class="p">:</span> <span class="s2">&quot;lightgreen&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Sociological and Environmental Interactions&quot;</span><span class="p">:</span> <span class="s2">&quot;paleturquoise&quot;</span>
+<span class="p">}</span>
+
+<span class="n">node_colors</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">G_full_biology</span><span class="o">.</span><span class="n">nodes</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s2">&quot;Donation&quot;</span><span class="p">:</span>
+        <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;yellow&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">layer_name</span><span class="p">,</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">highlighted_layers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">full_layers</span><span class="p">[</span><span class="n">layer_name</span><span class="p">]:</span>
+                <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+                <span class="k">break</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;lightgray&quot;</span><span class="p">)</span>
+
+<span class="c1"># Highlight the Stress Pathway</span>
+<span class="n">stress_path</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Fibrosis&quot;</span><span class="p">,</span> <span class="s2">&quot;Glomerular&quot;</span><span class="p">,</span> <span class="c1">#&quot;Renal&quot;, #&quot;u-Proteomics&quot;, # &quot;Hyperfiltration&quot;,</span>
+    <span class="s2">&quot;HTN&quot;</span><span class="p">,</span> <span class="s2">&quot;Anti-HTN&quot;</span><span class="p">,</span> <span class="s2">&quot;Glomerular&quot;</span><span class="p">,</span>  
+    <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Fibrosis&quot;</span><span class="p">,</span> <span class="c1"># &quot;Hyperfiltration&quot;,</span>
+    <span class="c1"># &quot;Contrast Agents&quot;, &quot;Hyperfiltration&quot;, </span>
+    <span class="s2">&quot;Glomerular&quot;</span><span class="p">,</span> <span class="s2">&quot;Hyperfiltration&quot;</span><span class="p">,</span> <span class="s2">&quot;uACR&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Hyperfiltration&quot;</span><span class="p">,</span> <span class="s2">&quot;Cardiovascular&quot;</span><span class="p">,</span> <span class="s2">&quot;GFR&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;uACR&quot;</span><span class="p">,</span> <span class="s2">&quot;GFR&quot;</span><span class="p">,</span> <span class="s2">&quot;Eligible&quot;</span><span class="p">,</span> 
+    <span class="c1"># &quot;uACR&quot;, &quot;Healthy&quot;, &quot;Eligible&quot;, </span>
+    <span class="c1"># &quot;uACR&quot;, &quot;Barriers&quot;, &quot;Eligible&quot;, </span>
+    <span class="s2">&quot;Mortality&quot;</span>
+<span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">stress_path</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">G_full_biology</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">stress_path</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">stress_path</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">weight</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">edge_widths</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">G_full_biology</span><span class="o">.</span><span class="n">edges</span><span class="p">():</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">stress_path</span><span class="p">,</span> <span class="n">stress_path</span><span class="p">[</span><span class="mi">1</span><span class="p">:]):</span>
+        <span class="n">edge_widths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># Highlighted path</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">edge_widths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Draw the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">G_full_biology</span><span class="p">,</span> <span class="n">pos_full_biology</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">4000</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span><span class="n">G_full_biology</span><span class="p">,</span> <span class="n">pos_full_biology</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">font_weight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edges</span><span class="p">(</span><span class="n">G_full_biology</span><span class="p">,</span> <span class="n">pos_full_biology</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">edge_widths</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Kidney Disease Risk Factors&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/5922cd8b380088a5e534e29e4b6a0de2e56a1620f07c4db32bca8586b02bb389.png" src="../_images/5922cd8b380088a5e534e29e4b6a0de2e56a1620f07c4db32bca8586b02bb389.png" />
+</div>
+</div>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/blanche.png"><img alt="../_images/blanche.png" src="../_images/blanche.png" style="width: 1%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text"><em>Some Known Kidney Disease Risk Factors</em>. In multivariable regression, uncertainty often arises from unmeasured variables, overlapping pathways, or interactions that remain unexplored. Within this analytical framework, pathways and connections not explicitly highlighted can symbolically represent this uncertainty. These latent nodes capture the intricate, multivariate interplay of risk factors that elude direct measurement or interpretation. This ambiguity is inherent in modeling biological systems and underscores the need for ongoing refinement of predictive frameworks while acknowledging the limits of causative understanding. By explicitly listing known risk factors, we aim to spark dialogue about factors not represented here and encourage exploration of datasets that remain untapped. For this analysis, we utilized NHANES as the source population for the healthy nondonor cohort. NHANES includes a robust dataset that allows us to highlight key pathways. In contrast, SRTR, our source for the kidney donor population, lacks many of these variables. However, <em>a priori</em>, we recognize that the “Donation” node inherently encodes many of these variables, reflecting the stringent criteria required for donor candidates to be approved and proceed with donation. <span id="id1"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id3" title="Komal Kumar, James M Tonascia, Abimereki D Muzaale, Tanjala S Purnell, Shane E Ottmann, Fawaz Al Ammary, Mary G Bowring, Anna Poon, Elizabeth A King, Allan B Massie, Eric K H Chow, Alvin G Thomas, Hao Ying, Marvin Borja, Jonathan M Konel, Macey Henderson, Andrew M Cameron, Jacqueline M Garonzik-Wang, and Dorry L Segev. Racial differences in completion of the living kidney donor evaluation process. Clinical Transplantation, 32(7):e13291, 2018. Author manuscript; available in PMC: 2019 Jul 1. Published in final edited form as: Clin Transplant. 2018 Jun 15. doi:10.1111/ctr.13291.">5</a></sup></span> This approach helps bridge gaps between these populations, offering a clearer perspective on donation-attributable risk. Below are the key variables highlighted in the NHANES dataset:</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><strong>Abbreviations:</strong><br />
+GFR: Glomerular filtration rate</p>
+<ul class="simple">
+<li><p>uACR: Urine albumin-creatinine ratio</p></li>
+<li><p>APOL1: Apolipoprotein L-1 high-risk alleles</p></li>
+<li><p>PKD: Polycystic kidney disease</p></li>
+</ul>
+</div>
+</figcaption>
+</figure>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./act1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="chapter1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">90-Day Risk of Death Following Living Kidney Donation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="chapter3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">90-Day Risk Attributable to Living Kidney Donation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Copyright © 2025 Abimereki Muzaale
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
