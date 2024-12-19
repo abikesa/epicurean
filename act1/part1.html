@@ -481,7 +481,7 @@ document.write(`
 <figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../_images/blanche.png"><img alt="../_images/blanche.png" src="../_images/blanche.png" style="width: 1%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Using data from the Scientific Registry of Transplant Recipients on living kidney donors from 1993 to 2022, we estimated perioperative mortality (death within 90 days of donation), 30-year mortality, and risk of ESRD. Death events were captured through the Organ Procurement and Transplantation Network (OPTN) living donor follow-up reported by transplant programs, the National Technical Information Service Limited Access Death Master File, and deaths made available to the OPTN contractor through an interagency data-sharing agreement between the Centers for Medicare &amp; Medicaid Services and the Health Resources and Services Administration. These were secondarily verified by the OPTN contractor. Per OPTN policy, all donor deaths within two years of donation must be reported within 72 hours of the hospital becoming aware of the death. ESRD development was ascertained using Centers for Medicare &amp; Medicaid Services data and defined as the initiation of maintenance dialysis, placement on the transplant waiting list, or receipt of a living or deceased donor kidney transplant, whichever occurred first. The healthy nondonor control population was derived from a cohort of 73,000 participants in the third National Health and Nutrition Examination Survey (NHANES). Both national datasets provided robust comparisons of donor and nondonor risks.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Using data from the Scientific Registry of Transplant Recipients from 1988 to 2020, we estimated perioperative mortality (death within 90 days of donation), 30-year mortality, and risk of ESRD. Death events were captured through the Organ Procurement and Transplantation Network (OPTN) living donor follow-up reported by transplant programs, the National Technical Information Service Limited Access Death Master File, and deaths made available to the OPTN contractor through an interagency data-sharing agreement between the Centers for Medicare &amp; Medicaid Services (CMS) and the Health Resources and Services Administration. These were secondarily verified by the OPTN contractor. Per OPTN policy, all donor deaths within two years of donation must be reported within 72 hours of the hospital becoming aware of the death. ESRD development was ascertained using Centers for Medicare &amp; Medicaid Services data and defined as the initiation of maintenance dialysis, placement on the transplant waiting list, or receipt of a living or deceased donor kidney transplant, whichever occurred first. The healthy nondonor control population was derived from a cohort of 73,000 participants in the third National Health and Nutrition Examination Survey (NHANES). The National Center for Health Statistics performed linkages to the CMS and National Death Index to to ascertain ESRD and death. Both national datasets provided robust comparisons of donor and nondonor risks.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -536,18 +536,22 @@ document.write(`
 <section id="how-it-works">
 <h3><strong>How It Works</strong><a class="headerlink" href="#how-it-works" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p>The app calculates the <strong>cumulative hazard</strong> by integrating the adjusted hazard function over time:
-$<span class="math notranslate nohighlight">\(
-\int h_0(t) \, \text{exp}(X\beta) \, dt
-\)</span>$
-This cumulative hazard reflects the total “exposure” to risk over the follow-up period.</p></li>
-<li><p>The survival probability is then derived using the exponential function <span class="math notranslate nohighlight">\( e^{-\int h_0(t) \, \text{exp}(X\beta) \, dt} \)</span>, representing the likelihood that the event has not occurred by time <span class="math notranslate nohighlight">\( t \)</span>.</p></li>
-<li><p>Finally, the <strong>personalized risk</strong> is calculated as:
-$<span class="math notranslate nohighlight">\(
-\Large 1 - e^{-\int h_0(t) \, \text{exp}(X\beta) \, dt}
-\)</span>$
-This value indicates the cumulative probability of the event occurring by a given time point.</p></li>
+<li><p>The app calculates the <strong>cumulative hazard</strong> by integrating the adjusted hazard function over time:</p></li>
 </ol>
+<div class="math notranslate nohighlight">
+\[
+\int h_0(t) \, \text{exp}(X\beta) \, dt
+\]</div>
+<p>This cumulative hazard reflects the total “exposure” to risk over the follow-up period.</p>
+<ol class="arabic simple" start="2">
+<li><p>The survival probability is then derived using the exponential function <span class="math notranslate nohighlight">\( e^{-\int h_0(t) \, \text{exp}(X\beta) \, dt} \)</span>, representing the likelihood that the event has not occurred by time <span class="math notranslate nohighlight">\( t \)</span>.</p></li>
+<li><p>Finally, the <strong>personalized risk</strong> is calculated as:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\Large 1 - e^{-\int h_0(t) \, \text{exp}(X\beta) \, dt}
+\]</div>
+<p>This value indicates the cumulative probability of the event occurring by a given time point.</p>
 </section>
 <hr class="docutils" />
 <section id="advantages-of-the-model">
@@ -564,7 +568,7 @@ This value indicates the cumulative probability of the event occurring by a give
 <ol class="arabic simple">
 <li><p><strong>Extended Follow-Up</strong>: Incorporating longer follow-up periods (e.g., 30 years) will improve the model’s utility for younger individuals or even older individuals with up 30 years of residual life expectancy.</p></li>
 <li><p><strong>Dynamic Risk Updating</strong>: Incorporating real-time updates to <span class="math notranslate nohighlight">\( X \)</span> as users input new clinical or lifestyle data, enabling iterative risk recalibration.</p></li>
-<li><p><strong>Interactive Visualizations</strong>: Presenting the risk curve for donors alongside the one for controls offers what Locke described in her editorial as the “idea”. <span id="id1"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id2" title="Jayme E. Locke. Donation-attributable risk—a call to action. JAMA Surgery, 159(9):967–968, September 2024. No abstract available. URL: https://jamanetwork.com/journals/jamasurgery/fullarticle/39046768, doi:10.1001/jamasurg.2024.2417.">2</a></sup></span>. Furthermore, our inclusion of 90% confidence intervals allows more advanced users to consider the error of margin in their inferences.</p></li>
+<li><p><strong>Interactive Visualizations</strong>: Presenting the risk curve for donors alongside the one for controls offers what Locke described in her editorial as the “idea”. <span id="id1"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id4" title="Jayme E. Locke. Donation-attributable risk—a call to action. JAMA Surgery, 159(9):967–968, September 2024. No abstract available. URL: https://jamanetwork.com/journals/jamasurgery/fullarticle/39046768, doi:10.1001/jamasurg.2024.2417.">2</a></sup></span>. Furthermore, our inclusion of 90% confidence intervals allows more advanced users to consider the error of margin in their inferences.</p></li>
 </ol>
 </section>
 </section>
