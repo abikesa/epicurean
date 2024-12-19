@@ -396,7 +396,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#answering-the-urgent-call-to-action">Answering The Urgent Call to Action</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rich-visualizations-of-risk">Rich Visualizations of Risk</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#app-features">App Features</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-donation-attributable-risk">Defining Donation-Attributable Risk</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-in-isolating-attributable-risk">Challenges in Isolating Attributable Risk</a><ul class="nav section-nav flex-column">
@@ -410,7 +410,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multivariable-regression">Multivariable Regression</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rich-visualizations-of-risk">Rich Visualizations of Risk</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clinical-implications">Clinical Implications</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#informing-consent">Informing Consent</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#improving-guidelines">Improving Guidelines</a></li>
@@ -431,8 +430,17 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="day-risk-attributable-to-living-kidney-donation">
 <h1>90-Day Risk Attributable to Living Kidney Donation<a class="headerlink" href="#day-risk-attributable-to-living-kidney-donation" title="Permalink to this heading">#</a></h1>
-<section id="answering-the-urgent-call-to-action">
-<h2>Answering The Urgent Call to Action<a class="headerlink" href="#answering-the-urgent-call-to-action" title="Permalink to this heading">#</a></h2>
+<section id="rich-visualizations-of-risk">
+<h2>Rich Visualizations of Risk<a class="headerlink" href="#rich-visualizations-of-risk" title="Permalink to this heading">#</a></h2>
+<p>The dynamic visualizations embedded in the app highlight the nuanced differences between risks for donors and their matched nondonor counterparts. For instance:</p>
+<iframe src="../testbin/test5/index.html" style="width:100%;height:900px"></iframe>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/blanche.png"><img alt="../_images/blanche.png" src="../_images/blanche.png" style="width: 1px; height: 1px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text"><em>Risk of Death Within 90 Days of Living Kidney Donation vs. Risk of Death Within 90 Days of Being Deemed Eligible to Donate</em>. The difference between these two risks informs the prospective donor about the risk their decision to donate carries. This address Locke’s urgent call in the recent editorial <span id="id1"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id4" title="Jayme E. Locke. Donation-attributable risk—a call to action. JAMA Surgery, 159(9):967–968, September 2024. No abstract available. URL: https://jamanetwork.com/journals/jamasurgery/fullarticle/39046768, doi:10.1001/jamasurg.2024.2417.">2</a></sup></span> and complements Massie’s recent report on the overall risk faced by the donor. <span id="id2"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id8" title="Allan B. Massie, Jennifer D. Motter, Jon J. Snyder, Macey L. Levan, and Dorry L. Segev. Thirty-year trends in perioperative mortality risk for living kidney donors. JAMA, 332(12):1015-1017, 2024. Available on 2025-02-28. doi:10.1001/jama.2024.14527.">4</a></sup></span></span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>These visualizations are made possible through Kaplan-Meier curves derived from base-case functions, beta coefficient vectors, and variance-covariance matrices. By rendering these results interactively, the app empowers users to explore and understand the risks associated with donation in a transparent and engaging way. We not only personalize the risk estimates, but visualize the error in each personalized estimate in both the donor and nondonor scenarios.</p>
 </section>
 <section id="app-features">
 <h2>App Features<a class="headerlink" href="#app-features" title="Permalink to this heading">#</a></h2>
@@ -468,7 +476,7 @@ document.write(`
 </section>
 <section id="data-limitations">
 <h3>3. Data Limitations<a class="headerlink" href="#data-limitations" title="Permalink to this heading">#</a></h3>
-<p>Existing datasets like SRTR provide detailed outcomes for donors but lack comparable depth for nondonor cohorts. Conversely, NHANES offers robust population-level data but lacks the specificity needed to accurately model donor evaluation process. <span id="id1"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id5" title="Komal Kumar, James M Tonascia, Abimereki D Muzaale, Tanjala S Purnell, Shane E Ottmann, Fawaz Al Ammary, Mary G Bowring, Anna Poon, Elizabeth A King, Allan B Massie, Eric K H Chow, Alvin G Thomas, Hao Ying, Marvin Borja, Jonathan M Konel, Macey Henderson, Andrew M Cameron, Jacqueline M Garonzik-Wang, and Dorry L Segev. Racial differences in completion of the living kidney donor evaluation process. Clinical Transplantation, 32(7):e13291, 2018. Author manuscript; available in PMC: 2019 Jul 1. Published in final edited form as: Clin Transplant. 2018 Jun 15. doi:10.1111/ctr.13291.">5</a></sup></span> Bridging these gaps requires innovative modeling techniques.</p>
+<p>Existing datasets like SRTR provide detailed outcomes for donors but lack comparable depth for nondonor cohorts. Conversely, NHANES offers robust population-level data but lacks the specificity needed to accurately model donor evaluation process. <span id="id3"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id5" title="Komal Kumar, James M Tonascia, Abimereki D Muzaale, Tanjala S Purnell, Shane E Ottmann, Fawaz Al Ammary, Mary G Bowring, Anna Poon, Elizabeth A King, Allan B Massie, Eric K H Chow, Alvin G Thomas, Hao Ying, Marvin Borja, Jonathan M Konel, Macey Henderson, Andrew M Cameron, Jacqueline M Garonzik-Wang, and Dorry L Segev. Racial differences in completion of the living kidney donor evaluation process. Clinical Transplantation, 32(7):e13291, 2018. Author manuscript; available in PMC: 2019 Jul 1. Published in final edited form as: Clin Transplant. 2018 Jun 15. doi:10.1111/ctr.13291.">5</a></sup></span> Bridging these gaps requires innovative modeling techniques.</p>
 </section>
 </section>
 <section id="methodological-approaches">
@@ -478,25 +486,13 @@ document.write(`
 <p>DAGs are invaluable for visualizing relationships between risk factors and isolating pathways specific to kidney disease and donation. For example:</p>
 <ul class="simple">
 <li><p><strong>Known Variables</strong>: GFR, urine albumin-creatinine ratio, and hypertension.</p></li>
-<li><p><strong>Latent Nodes</strong>: Represent unmeasured variables, such as frailty in the older donor candidate, that mediate the relationship between donation and adverse outcomes such as perioperative death. <span id="id2"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id6" title="Martin A. Makary, Dorry L. Segev, Peter J. Pronovost, Dora Syin, Karen Bandeen-Roche, Purvi Patel, Ryan Takenaga, Lara Devgan, Christine G. Holzmueller, Jing Tian, and Linda P. Fried. Frailty as a predictor of surgical outcomes in older patients. Journal of the American College of Surgeons, 210(6):901–908, June 2010. URL: https://doi.org/10.1016/j.jamcollsurg.2010.01.028, doi:10.1016/j.jamcollsurg.2010.01.028.">1</a></sup></span></p></li>
+<li><p><strong>Latent Nodes</strong>: Represent unmeasured variables, such as frailty in the older donor candidate, that mediate the relationship between donation and adverse outcomes such as perioperative death. <span id="id4"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id6" title="Martin A. Makary, Dorry L. Segev, Peter J. Pronovost, Dora Syin, Karen Bandeen-Roche, Purvi Patel, Ryan Takenaga, Lara Devgan, Christine G. Holzmueller, Jing Tian, and Linda P. Fried. Frailty as a predictor of surgical outcomes in older patients. Journal of the American College of Surgeons, 210(6):901–908, June 2010. URL: https://doi.org/10.1016/j.jamcollsurg.2010.01.028, doi:10.1016/j.jamcollsurg.2010.01.028.">1</a></sup></span></p></li>
 </ul>
 </section>
 <section id="multivariable-regression">
 <h3>Multivariable Regression<a class="headerlink" href="#multivariable-regression" title="Permalink to this heading">#</a></h3>
 <p>Advanced regression techniques can adjust for confounding variables, providing more precise estimates of attributable risk. However, these models rely on assumptions about data completeness and the absence of unmeasured confounders.</p>
 </section>
-</section>
-<section id="rich-visualizations-of-risk">
-<h2>Rich Visualizations of Risk<a class="headerlink" href="#rich-visualizations-of-risk" title="Permalink to this heading">#</a></h2>
-<p>The dynamic visualizations embedded in the app highlight the nuanced differences between risks for donors and their matched nondonor counterparts. For instance:</p>
-<iframe src="../testbin/test5/index.html" style="width:100%;height:900px"></iframe>
-<figure class="align-default" id="id6">
-<a class="reference internal image-reference" href="../_images/blanche.png"><img alt="../_images/blanche.png" src="../_images/blanche.png" style="width: 1px; height: 1px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text"><em>Risk of Death Within 90 Days of Living Kidney Donation vs. Risk of Death Within 90 Days of Being Deemed Eligible to Donate</em>. The difference between these two risks informs the prospective donor about the risk their decision to donate carries. This address Locke’s urgent call in the recent editorial <span id="id3"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id4" title="Jayme E. Locke. Donation-attributable risk—a call to action. JAMA Surgery, 159(9):967–968, September 2024. No abstract available. URL: https://jamanetwork.com/journals/jamasurgery/fullarticle/39046768, doi:10.1001/jamasurg.2024.2417.">2</a></sup></span> and complements Massie’s recent report on the overall risk faced by the donor. <span id="id4"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id8" title="Allan B. Massie, Jennifer D. Motter, Jon J. Snyder, Macey L. Levan, and Dorry L. Segev. Thirty-year trends in perioperative mortality risk for living kidney donors. JAMA, 332(12):1015-1017, 2024. Available on 2025-02-28. doi:10.1001/jama.2024.14527.">4</a></sup></span></span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>These visualizations are made possible through Kaplan-Meier curves derived from base-case functions, beta coefficient vectors, and variance-covariance matrices. By rendering these results interactively, the app empowers users to explore and understand the risks associated with donation in a transparent and engaging way. We not only personalize the risk estimates, but visualize the error in each personalized estimate in both the donor and nondonor scenarios.</p>
 </section>
 <section id="clinical-implications">
 <h2>Clinical Implications<a class="headerlink" href="#clinical-implications" title="Permalink to this heading">#</a></h2>
@@ -583,7 +579,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#answering-the-urgent-call-to-action">Answering The Urgent Call to Action</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rich-visualizations-of-risk">Rich Visualizations of Risk</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#app-features">App Features</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-donation-attributable-risk">Defining Donation-Attributable Risk</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-in-isolating-attributable-risk">Challenges in Isolating Attributable Risk</a><ul class="nav section-nav flex-column">
@@ -597,7 +593,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multivariable-regression">Multivariable Regression</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rich-visualizations-of-risk">Rich Visualizations of Risk</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clinical-implications">Clinical Implications</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#informing-consent">Informing Consent</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#improving-guidelines">Improving Guidelines</a></li>
