@@ -61,6 +61,8 @@
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'act1/part1';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -373,7 +375,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -389,6 +393,24 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overall-study-design-for-national-databases">Overall Study Design for National Databases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#personalized-scenarios-for-healthy-nondonor-candidates">Personalized Scenarios for Healthy Nondonor Candidates</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#personalized-risk-model-description">Personalized Risk Model Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#baseline-hazard-function-h-0-t"><strong>1. Baseline Hazard Function: <span class="math notranslate nohighlight">\( h_0(t) \)</span></strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-adjustment-text-exp-x-beta"><strong>2. Risk Adjustment: <span class="math notranslate nohighlight">\( \text{exp}(X\beta) \)</span></strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#follow-up-period-t"><strong>3. Follow-Up Period: <span class="math notranslate nohighlight">\( t \)</span></strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-it-works"><strong>How It Works</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-of-the-model"><strong>Advantages of the Model</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#future-enhancements"><strong>Future Enhancements</strong></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -400,6 +422,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="perioperative-risk">
 <span id="perioperative"></span><h1>Perioperative Risk<a class="headerlink" href="#perioperative-risk" title="Permalink to this heading">#</a></h1>
+<section id="overall-study-design-for-national-databases">
+<h2>Overall Study Design for National Databases<a class="headerlink" href="#overall-study-design-for-national-databases" title="Permalink to this heading">#</a></h2>
 <p>The Graph below <a class="reference external" href="https://muzaale.github.io/thesis/act_0/act_0_0/act_0_0_1/act_0_0_1_1.html">recaps</a> the overall study design for Aims 1-2</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -454,12 +478,96 @@ document.write(`
 <img alt="../_images/1c61c501533e4856bfeba8106c4fa4b4b1bbefe2a0afcfecd78575e6be3bacd1.png" src="../_images/1c61c501533e4856bfeba8106c4fa4b4b1bbefe2a0afcfecd78575e6be3bacd1.png" />
 </div>
 </div>
-<figure class="align-default" id="id1">
+<figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../_images/blanche.png"><img alt="../_images/blanche.png" src="../_images/blanche.png" style="width: 1%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Using data from the Scientific Registry of Transplant Recipients on living kidney donors from 1993 to 2022, we estimated perioperative mortality (death within 90 days of donation), 30-year mortality, and risk of ESRD. Death events were captured through the Organ Procurement and Transplantation Network (OPTN) living donor follow-up reported by transplant programs, the National Technical Information Service Limited Access Death Master File, and deaths made available to the OPTN contractor through an interagency data-sharing agreement between the Centers for Medicare &amp; Medicaid Services and the Health Resources and Services Administration. These were secondarily verified by the OPTN contractor. Per OPTN policy, all donor deaths within two years of donation must be reported within 72 hours of the hospital becoming aware of the death. ESRD development was ascertained using Centers for Medicare &amp; Medicaid Services data and defined as the initiation of maintenance dialysis, placement on the transplant waiting list, or receipt of a living or deceased donor kidney transplant, whichever occurred first. The healthy nondonor control population was derived from a cohort of 73,000 participants in the third National Health and Nutrition Examination Survey (NHANES). Both national datasets provided robust comparisons of donor and nondonor risks.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Using data from the Scientific Registry of Transplant Recipients on living kidney donors from 1993 to 2022, we estimated perioperative mortality (death within 90 days of donation), 30-year mortality, and risk of ESRD. Death events were captured through the Organ Procurement and Transplantation Network (OPTN) living donor follow-up reported by transplant programs, the National Technical Information Service Limited Access Death Master File, and deaths made available to the OPTN contractor through an interagency data-sharing agreement between the Centers for Medicare &amp; Medicaid Services and the Health Resources and Services Administration. These were secondarily verified by the OPTN contractor. Per OPTN policy, all donor deaths within two years of donation must be reported within 72 hours of the hospital becoming aware of the death. ESRD development was ascertained using Centers for Medicare &amp; Medicaid Services data and defined as the initiation of maintenance dialysis, placement on the transplant waiting list, or receipt of a living or deceased donor kidney transplant, whichever occurred first. The healthy nondonor control population was derived from a cohort of 73,000 participants in the third National Health and Nutrition Examination Survey (NHANES). Both national datasets provided robust comparisons of donor and nondonor risks.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+</section>
+<section id="personalized-scenarios-for-healthy-nondonor-candidates">
+<h2>Personalized Scenarios for Healthy Nondonor Candidates<a class="headerlink" href="#personalized-scenarios-for-healthy-nondonor-candidates" title="Permalink to this heading">#</a></h2>
+<section id="personalized-risk-model-description">
+<h3>Personalized Risk Model Description<a class="headerlink" href="#personalized-risk-model-description" title="Permalink to this heading">#</a></h3>
+<p>The app employs a personalized risk model based on the survival function:</p>
+<div class="math notranslate nohighlight">
+\[
+\Large 1 - e^{-\int h_0(t) \, \text{exp}(X\beta) \, dt}
+\]</div>
+<p>This equation calculates the cumulative probability of an event (e.g., end-stage renal disease, mortality, or hospitalization) over a specified follow-up period. The components of the model are as follows:</p>
+</section>
+<hr class="docutils" />
+<section id="baseline-hazard-function-h-0-t">
+<h3><strong>1. Baseline Hazard Function: <span class="math notranslate nohighlight">\( h_0(t) \)</span></strong><a class="headerlink" href="#baseline-hazard-function-h-0-t" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The baseline hazard function, <span class="math notranslate nohighlight">\( h_0(t) \)</span>, represents the risk of the event occurring for a reference population (base-case) at any given time <span class="math notranslate nohighlight">\( t \)</span>.</p></li>
+<li><p>It is <strong>nonparametric</strong>, meaning it does not assume a specific mathematical form but is instead estimated directly from the data.</p></li>
+<li><p>This serves as the foundational risk profile to which adjustments for individual characteristics are applied.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="risk-adjustment-text-exp-x-beta">
+<h3><strong>2. Risk Adjustment: <span class="math notranslate nohighlight">\( \text{exp}(X\beta) \)</span></strong><a class="headerlink" href="#risk-adjustment-text-exp-x-beta" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The term <span class="math notranslate nohighlight">\( \text{exp}(X\beta) \)</span> is a scaling factor derived from a <strong>maximum-likelihood estimate</strong> of the relative hazard for a specific individual compared to the base-case.</p></li>
+<li><p>It accounts for differences in risk due to explanatory variables <span class="math notranslate nohighlight">\( X \)</span>, such as:</p>
+<ul>
+<li><p><strong>Demographics</strong>: Age, sex, race/ethnicity.</p></li>
+<li><p><strong>Clinical Characteristics</strong>: Blood pressure, kidney function (e.g., GFR, albumin levels), or comorbidities (e.g., diabetes, hypertension).</p></li>
+<li><p><strong>Lifestyle Factors</strong>: Smoking status, physical activity levels.</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\( \beta \)</span> represents the regression coefficients that quantify the log-scale relationship between the explanatory variables and the hazard.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="follow-up-period-t">
+<h3><strong>3. Follow-Up Period: <span class="math notranslate nohighlight">\( t \)</span></strong><a class="headerlink" href="#follow-up-period-t" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( t \)</span> is the time horizon over which risk is assessed. For example:</p>
+<ul>
+<li><p>Currently, the app considers <strong>30 years</strong> of follow-up for nondonors and <strong>15 years</strong> of follow-up for donors. With our established infrastructure, updating this to <strong>30 years</strong> of follow-up for donors should take no more than a day (the script has to be run remotely at SRTR)</p></li>
+<li><p>The app also considers <strong>90 day</strong> mortality in the perioperative period</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="how-it-works">
+<h3><strong>How It Works</strong><a class="headerlink" href="#how-it-works" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>The app calculates the <strong>cumulative hazard</strong> by integrating the adjusted hazard function over time:
+$<span class="math notranslate nohighlight">\(
+\int h_0(t) \, \text{exp}(X\beta) \, dt
+\)</span>$
+This cumulative hazard reflects the total “exposure” to risk over the follow-up period.</p></li>
+<li><p>The survival probability is then derived using the exponential function <span class="math notranslate nohighlight">\( e^{-\int h_0(t) \, \text{exp}(X\beta) \, dt} \)</span>, representing the likelihood that the event has not occurred by time <span class="math notranslate nohighlight">\( t \)</span>.</p></li>
+<li><p>Finally, the <strong>personalized risk</strong> is calculated as:
+$<span class="math notranslate nohighlight">\(
+\Large 1 - e^{-\int h_0(t) \, \text{exp}(X\beta) \, dt}
+\)</span>$
+This value indicates the cumulative probability of the event occurring by a given time point.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="advantages-of-the-model">
+<h3><strong>Advantages of the Model</strong><a class="headerlink" href="#advantages-of-the-model" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Personalization</strong>: By incorporating individual-level explanatory variables <span class="math notranslate nohighlight">\( X \)</span>, the app generates a risk estimate tailored to each user’s unique clinical profile.</p></li>
+<li><p><strong>Flexibility</strong>: The nonparametric baseline hazard <span class="math notranslate nohighlight">\( h_0(t) \)</span> allows the model to adapt to observed patterns in the data without restrictive assumptions.</p></li>
+<li><p><strong>Transparency</strong>: Users can explore how changes in <span class="math notranslate nohighlight">\( X \)</span> (e.g., improving blood pressure or quitting smoking) affect their personalized risk.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="future-enhancements">
+<h3><strong>Future Enhancements</strong><a class="headerlink" href="#future-enhancements" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Extended Follow-Up</strong>: Incorporating longer follow-up periods (e.g., 30 years) will improve the model’s utility for younger individuals or even older individuals with up 30 years of residual life expectancy.</p></li>
+<li><p><strong>Dynamic Risk Updating</strong>: Incorporating real-time updates to <span class="math notranslate nohighlight">\( X \)</span> as users input new clinical or lifestyle data, enabling iterative risk recalibration.</p></li>
+<li><p><strong>Interactive Visualizations</strong>: Presenting the risk curve for donors alongside the one for controls offers what Locke described in her editorial as the “idea”. <span id="id1"><sup><a class="reference internal" href="../act3/part3/part3_3.html#id2" title="Jayme E. Locke. Donation-attributable risk—a call to action. JAMA Surgery, 159(9):967–968, September 2024. No abstract available. URL: https://jamanetwork.com/journals/jamasurgery/fullarticle/39046768, doi:10.1001/jamasurg.2024.2417.">2</a></sup></span>. Furthermore, our inclusion of 90% confidence intervals allows more advanced users to consider the error of margin in their inferences.</p></li>
+</ol>
+</section>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -518,6 +626,31 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overall-study-design-for-national-databases">Overall Study Design for National Databases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#personalized-scenarios-for-healthy-nondonor-candidates">Personalized Scenarios for Healthy Nondonor Candidates</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#personalized-risk-model-description">Personalized Risk Model Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#baseline-hazard-function-h-0-t"><strong>1. Baseline Hazard Function: <span class="math notranslate nohighlight">\( h_0(t) \)</span></strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-adjustment-text-exp-x-beta"><strong>2. Risk Adjustment: <span class="math notranslate nohighlight">\( \text{exp}(X\beta) \)</span></strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#follow-up-period-t"><strong>3. Follow-Up Period: <span class="math notranslate nohighlight">\( t \)</span></strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-it-works"><strong>How It Works</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-of-the-model"><strong>Advantages of the Model</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#future-enhancements"><strong>Future Enhancements</strong></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
